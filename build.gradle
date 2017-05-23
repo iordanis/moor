@@ -1,0 +1,30 @@
+group 'com.shazam'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    ext.kotlin_version = '1.1.2-2'
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: 'kotlin'
+
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://maven.google.com"
+    }
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+    compile "org.xerial:sqlite-jdbc:3.18.0"
+    compile "com.squareup:javapoet:1.9.0"
+    compile "android.arch.persistence.room:runtime:1.0.0-alpha1"
+}
