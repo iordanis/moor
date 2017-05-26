@@ -7,7 +7,6 @@ import com.squareup.javapoet.TypeSpec
 import javax.lang.model.element.Modifier
 
 class ClassFactory(val appPackage: String) {
-
     fun createClassFrom(table: Table) {
         val tableClassBuilder = TypeSpec.classBuilder(table.prettifiedTableName())
                 .addModifiers(Modifier.PUBLIC, Modifier.FINAL)

@@ -27,4 +27,12 @@ dependencies {
     compile "org.xerial:sqlite-jdbc:3.18.0"
     compile "com.squareup:javapoet:1.9.0"
     compile "android.arch.persistence.room:runtime:1.0.0-alpha1"
+
+    testCompile ("junit:junit:4.12") {
+        exclude module: "hamcrest-core"
+    }
+    testCompile "org.hamcrest:hamcrest-all:1.3"
+    testCompile ("com.shazam:shazamcrest:0.11") {
+        exclude module: "junit"
+    }
 }
